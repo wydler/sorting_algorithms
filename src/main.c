@@ -7,18 +7,22 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "insertion_sort.h"
+#include "quicksort.h"
+#include "kniffelsort.h"
 
-#define MAX 10
+#define MAX 50
 int array[MAX];
 
 /*
  * Fill the array with your values
  */
 void initArray() {
+	srand(time(0));
 	int i;
 	for(i = 0; i < MAX; i++) {
-		array[i] = MAX-i;
+		array[i] = rand()%MAX;
 	}
 }
 
@@ -37,7 +41,11 @@ int main(void) {
 	initArray();
 	printf("unsorted: ");
 	printArray();
-	insertion_sort(array, MAX);
+
+	//insertion_sort(array, MAX);
+	quicksort(array, 0, MAX-1);
+	//kniffelsort(array, MAX);
+
 	printf("sorted: ");
 	printArray();
 	return EXIT_SUCCESS;
