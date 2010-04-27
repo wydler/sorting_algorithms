@@ -12,7 +12,7 @@
 #include "quicksort.h"
 #include "kniffelsort.h"
 
-#define MAX 50
+#define MAX 14
 int array[MAX];
 
 /*
@@ -43,8 +43,8 @@ int main(void) {
 	printArray();
 
 	//insertion_sort(array, MAX);
-	quicksort(array, 0, MAX-1);
-	//kniffelsort(array, MAX);
+	//quicksort(array, 0, MAX-1);
+	kniffelsort2(array, MAX);
 
 	printf("sorted: ");
 	printArray();
