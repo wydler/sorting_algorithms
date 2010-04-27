@@ -9,5 +9,6 @@
 #define KNIFFELSORT_H_
 
 void kniffelsort(int[], int);
+void kniffelsort2(int[], int);
 
 #endif /* KNIFFELSORT_H_ */
